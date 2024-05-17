@@ -1,0 +1,14 @@
+{
+  "name": "hoteliapp",
+  "version": "1.0.0",
+  "description": "Hotelia App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Paola Arguelles",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
