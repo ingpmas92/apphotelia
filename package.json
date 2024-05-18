@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "Hotelia App",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "dev": "nodemon src/index.js"
   },
   "author": "Paola Arguelles",
   "license": "ISC",
