@@ -1,11 +1,18 @@
 import { Router } from "express";
-import { getUsers } from "../controler/user.controler.js";
+import { getUsers, getUser, createUser, updateUser, deleteUser, habilitarUsuario, deshabilitarUsuario } from "../controler/user.controler.js";
 
-const router=Router()
+const router = Router();
 
-router.get('/user',getUsers)
-router.post('/user',(req,res)=>res.send('creando un user'))
-router.put('/user',(req,res)=>res.send('actualizando un user'))
-router.delete('/user',(req,res)=>res.send('borrando un user'))
+router.get('/users', getUsers);
+router.get('/users/:id_usuario', getUser);
+router.post('/users', createUser);
+router.patch('/users/:id_usuario', updateUser);
+router.delete('/users/:id_usuario', deleteUser);
 
-export default router
+// Rutas para habilitar y deshabilitar usuario
+router.patch('/users/:id_usuario/habilitar', habilitarUsuario);
+router.patch('/users/:id_usuario/deshabilitar', deshabilitarUsuario);
+
+export default router;
+
+
